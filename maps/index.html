@@ -61,10 +61,9 @@
 			.addTo(mymap).bindPopup("点击了三角形");
 
 
-		var popup = L.popup();
 
 		function onMapClick(e) {
-			popup
+			L.popup()
 				.setLatLng(e.latlng)
 				.setContent("点击的经纬度 " + e.latlng.toString())
 				.openOn(mymap);

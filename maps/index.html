@@ -9,14 +9,14 @@
 
 	<link rel="stylesheet" href="leaflet.css">
 	<script src="leaflet.js"></script>
-
-
-
+	<style>
+	
+	</style>
 </head>
 
 <body>
 
-	<div id="mapid" style="height: 500px; position: relative;">
+	<div id="mapid" style="height:600px ;position: relative;">
 	</div>
 	<script>
 		var mymap = L.map('mapid').setView([34.82081, 113.66786], 13);
@@ -63,10 +63,9 @@
 			.addTo(mymap).bindPopup("点击了三角形");
 
 
-		var popup = L.popup();
 
 		function onMapClick(e) {
-			popup
+			L.popup()
 				.setLatLng(e.latlng)
 				.setContent("点击的经纬度 " + e.latlng.toString())
 				.openOn(mymap);
